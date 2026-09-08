@@ -16,29 +16,65 @@
 
 ## Timeline (target: 2026-09-30)
 
-Bottom-up estimate of remaining work. Today: 2026-09-08. Available: 22 days, 2 people.
+Bottom-up estimate. Today: 2026-09-08. Available: 22 days, 2 people.
 
-| Task | Owner | Est. days | Depends on | Target |
-|------|-------|-----------|------------|--------|
-| **Gap 2:** Uncertainty propagation search + triage | Val | 2 | — | Sep 10 |
-| **Gap 3:** Burst missingness search + triage | Val | 1 | — | Sep 11 |
-| **Update extraction matrix** with MNAR/bridge columns | Fer | 1 | Gap 1 done | Sep 10 |
-| **Journal selection** (5 options: APC, review time, rejection rate) | Fer | 1 | — | Sep 10 |
-| **Section 2: Review Methodology** (2.1–2.6) | Val + Fer | 3 | — | Sep 12 |
-| **Section 3: Classical foundations** (Rubin, EM, MI) | — | 3 | — | Sep 15 |
-| **Section 4: Traditional methods** (interpolation, KNN, Kalman) | — | 2 | — | Sep 17 |
-| **Section 5: ML bridge** (SOM, MLP, RF) | — | 2 | — | Sep 19 |
-| **Section 6: Deep generative models** (GANs, VAEs, SAITS, CSDI) | — | 3 | — | Sep 22 |
-| **Section 7: Application to air quality / SIMA** | — | 2 | — | Sep 24 |
-| **Section 8: Discussion** (RMSE fallacy, bidirectional leakage, MNAR bridge, future work) | — | 2 | Gaps 1-3 | Sep 26 |
-| **Conclusion** | — | 1 | — | Sep 27 |
-| **Internal review + revision** | Val + Fer | 3 | all writing | Sep 30 |
+### Article sections
 
-**Total:** ~26 person-days across 22 calendar days (2 people).
+1. Introduction — drafted (Fer), needs revision
+2. Review Methodology — partially drafted, Val finishing
+3. Foundations of missing-data inference
+4. Classical approaches to imputation
+5. Deep learning for multivariate time-series imputation
+6. Evaluation of imputation methods
+7. Application domains
+8. Taxonomy and practical decision framework
+9. Open challenges and research agenda
+10. Conclusion
 
-**Unassigned writing sections:** Sections 3–8 need Val/Fer ownership. The bitácora shows Fernando drafting the intro and Valeria doing the research/tool work — you'll want to split the writing sections explicitly.
+### Task estimates and proposed split
 
-**Risk:** The writing phases (Sections 3–8) are sequential by narrative arc but could partially overlap if each person drafts different sections in parallel. If writing is fully parallelized (Val takes 3 sections, Fer takes 3), the critical path drops to ~14 calendar days + 3 days revision = 17 days. Feasible but tight.
+**Week 1 (Sep 8–14): Gap searches + start writing**
+
+| Task | Owner | Est. days | Target |
+|------|-------|-----------|--------|
+| Gap 2: Uncertainty propagation search + triage | Val | 2 | Sep 10 |
+| Gap 3: Burst missingness search + triage | Val | 1 | Sep 11 |
+| Finish §2 Review Methodology | Val | 2 | Sep 12 |
+| §3 Foundations of missing-data inference | Fer | 3 | Sep 12 |
+| Journal shortlist (5 options: APC, review time, rejection rate) | Fer | 1 | Sep 10 |
+
+**Week 2 (Sep 15–21): Core body writing**
+
+| Task | Owner | Est. days | Target |
+|------|-------|-----------|--------|
+| §4 Classical approaches to imputation | Fer | 2 | Sep 17 |
+| §5 Deep learning for MTS imputation | Fer | 3 | Sep 21 |
+| §6 Evaluation of imputation methods | Val | 2 | Sep 17 |
+| §8 Taxonomy and practical decision framework | Val | 2 | Sep 19 |
+
+**Week 3 (Sep 22–27): Remaining sections + integration**
+
+| Task | Owner | Est. days | Target |
+|------|-------|-----------|--------|
+| §7 Application domains | Fer | 2 | Sep 24 |
+| §9 Open challenges and research agenda | Val | 2 | Sep 24 |
+| §10 Conclusion | Val + Fer | 1 | Sep 25 |
+| Revise §1 Introduction (align with final content) | Fer | 1 | Sep 26 |
+
+**Week 3.5 (Sep 27–30): Internal review**
+
+| Task | Owner | Est. days | Target |
+|------|-------|-----------|--------|
+| Cross-review (each reads the other's sections) | Val + Fer | 2 | Sep 29 |
+| Final integration and polish | Val + Fer | 1 | Sep 30 |
+
+**Total:** ~27 person-days across 22 calendar days (2 people).
+
+**Proposed split rationale:**
+- **Fer** → §3 Foundations, §4 Classical, §5 Deep learning, §7 Applications — Fer has the extraction matrix and drafted the intro, so the descriptive/survey sections build on that work.
+- **Val** → §2 Methodology, §6 Evaluation, §8 Taxonomy, §9 Open challenges — Val did the gap analysis, MNAR bridge research, and citation graph, so the analytical/synthesis sections build on that work.
+
+**Risk:** Writing must start by Sep 12 at the latest. The bottleneck is Fer's §5 (Deep learning, 3 days) — if it slips, everything downstream shifts. Val's gap searches (Sep 8–11) should not delay writing start since §2 can be drafted in parallel.
 
 ---
 
@@ -218,9 +254,11 @@ NotebookLM found 11 candidate papers across 4 themes:
 
 ## Phase 4: Article Writing
 
-**Narrative arc:** Classical statistical foundations (Rubin, EM, MI) --> Traditional methods (interpolation, regression, KNN, Kalman) --> Machine learning (SOM, MLP, RF) --> Deep generative models (GANs, VAEs, diffusion, transformers/SAITS/CSDI) --> Application to air quality --> Limitations & open challenges
+**Sections:** See Timeline above for the full 10-section structure and ownership split.
 
-**Status:** Fernando drafted abstract + introduction in Spanish and English (2026-08-25), revised (2026-09-06). Remaining sections not started.
+**Narrative arc:** Foundations of missing-data inference (Rubin, EM, MI) → Classical approaches (interpolation, KNN, Kalman) → Deep learning for MTS imputation (GANs, VAEs, SAITS, CSDI) → Evaluation methods → Application domains → Taxonomy/decision framework → Open challenges
+
+**Status:** Fernando drafted abstract + introduction in Spanish and English (2026-08-25), revised (2026-09-06). Fernando can start body writing immediately (2026-09-08). Remaining sections not started.
 
 ---
 
