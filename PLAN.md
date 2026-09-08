@@ -161,7 +161,7 @@ NotebookLM found 11 candidate papers across 4 themes:
 3. Deep generative models designed for MNAR (MIWAE, not-MIWAE, PSMVAE, GNR)
 4. RMSE vs. inferential validity tension (van Buuren "imputation is not prediction", Beyond Accuracy benchmark)
 
-**Important caveat:** These 11 papers are mostly about tabular data, not time series. The bridge between MNAR theory and time series DL (BRITS, SAITS) specifically is still a gap — will need to be addressed in writing.
+**Key finding:** These 11 papers are mostly about tabular data, not time series. The theoretical bridge between MNAR theory and time-series DL (BRITS, SAITS, CSDI) specifically does not exist in the literature. No paper proves that time-series DL imputation architectures produce Rubin-valid posterior draws under stated missingness conditions. This is not a caveat — it is a central contribution of the review. See `notes/missing_bridge_argument.md` for full reasoning.
 
 **Known gap in the 11 candidates:** All are post-2018. Missing the older foundational work (1990s-2010s) on pattern-mixture models, selection models, and early MNAR theory that the newer papers build on. Plan: after reviewing the 11 candidates, run a second NotebookLM deep search targeting pre-2018 foundations.
 
@@ -188,7 +188,8 @@ NotebookLM found 11 candidate papers across 4 themes:
 - [ ] Search for papers specifically addressing multi-day sensor outages or long gap imputation
 - [ ] Triage and add to collection
 
-### Discussion section additions (for Phase 4 writing)
+### Discussion section additions (for §6, §8, §9 writing)
+- [ ] **The missing bridge (key contribution):** No formal proof exists that time-series DL imputation (BRITS, SAITS, CSDI) produces Rubin-valid inference. The MNAR-aware models (not-MIWAE, PSMVAE) are tabular-only. This gap is the review's central finding.
 - [ ] Point reconstruction vs. inferential validity — the field traded rigor (Rubin) for accuracy (SAITS). Core narrative thread.
 - [ ] Bidirectional info leakage — retrospective reconstruction vs. real-time alerting. Brief paragraph.
 - [ ] Extreme value / regulatory peaks — RMSE-optimized models underpredict toxic peaks. Brief future work.
@@ -240,15 +241,17 @@ NotebookLM found 11 candidate papers across 4 themes:
 
 **Objective:** Write section 2 of the article (methodology of the review itself).
 
-**Subsections** (from Fernando's outline):
-- 2.1 Type of review (narrative, interpretive synthesis)
-- 2.2 Sources consulted (backward/forward search from seminal articles)
-- 2.3 Search strings (table by topic: fundamentals, time series, deep learning, generative, applications)
-- 2.4 Inclusion criteria
-- 2.5 Exclusion criteria
-- 2.6 Synthesis strategy (organize by inferential foundations, method family, output type, missingness mechanism, data structure, computational cost, application domain)
+**Framing decision:** This is a **narrative review**, not a systematic review. §2 should describe the actual process used — purposive and iterative — without mimicking systematic review conventions (PRISMA, pre-registered search strings, strict inclusion/exclusion). Presenting systematic-style criteria risks a reviewer holding us to standards we can't meet. Instead, frame the rigor through traceability (search log, triage workflow, citation graph).
 
-**Status:** Fernando proposed the structure (2026-08-23). Valeria started drafting (2026-09-01). In progress.
+**Revised subsections:**
+- 2.1 Type of review — narrative, interpretive synthesis; scope and objectives
+- 2.2 Seed collection — initial ~75 articles from domain expertise and prior coursework
+- 2.3 Citation network analysis — forward/reverse citation tracing via OpenAlex to identify clusters and gaps
+- 2.4 Targeted gap filling — NotebookLM deep search + manual reference tracing for specific theoretical gaps (MNAR, uncertainty propagation, burst missingness)
+- 2.5 Triage process — structured ADD/SKIP evaluation against scope criteria (see `Notebooklm/TRIAGE_WORKFLOW.md` and `candidates_veredict.csv`)
+- 2.6 Synthesis strategy — organized by narrative arc (foundations → classical → DL → evaluation → challenges), not by chronology or method family alone
+
+**Status:** Fernando proposed the original structure (2026-08-23). Valeria started drafting (2026-09-01). Subsections revised (2026-09-08) to reflect narrative review framing. In progress.
 
 
 
@@ -286,6 +289,6 @@ These entries in the .bib don't seem to match the review's scope:
 ## Tools & Setup
 
 - **Reference manager:** Zotero (migrated from Mendeley on Aug 24)
-- **Language:** Python
 - **APIs:** Semantic Scholar, OpenAlex (free, no key needed for basic use)
-- **This repo:** Tooling only (not the manuscript)
+- **This repo (NarrativeReview-SIMA):** Plan, extraction matrix, search log, NotebookLM research artifacts
+- **[PaperConnect repo](https://github.com/Krul-dev/PaperConnect):** Citation graph tool (Python), search tool, `SIMA PERSONAL.bib` file
