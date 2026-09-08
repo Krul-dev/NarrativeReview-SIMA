@@ -6,9 +6,39 @@
 
 **Working title:** *From Statistical Missing-Data Inference to Deep Generative Imputation for Multivariate Time Series: A Narrative Review*
 
-**Team:** Valeria, Fernando, Arturo + 2 professors (including Facundo)
+**Team:** Valeria García Hernández, Fernando — supervised by Raúl Gómez Muñoz and Blanca Rosa Ruiz Hernández
 
-**Context:** College degree research project. The review will later inform the development of an imputation method for SIMA (Sistema Integral de Monitoreo Ambiental) in Monterrey.
+**Context:** College degree research project. The review will later inform the development of an imputation method for SIMA (Sistema Integral de Monitoreo Ambiental) in Monterrey. Facundo will assist with the future implementation phase, not the review itself.
+
+**Target:** Finish writing by **2026-09-30** (22 days from Sep 8).
+
+---
+
+## Timeline (target: 2026-09-30)
+
+Bottom-up estimate of remaining work. Today: 2026-09-08. Available: 22 days, 2 people.
+
+| Task | Owner | Est. days | Depends on | Target |
+|------|-------|-----------|------------|--------|
+| **Gap 2:** Uncertainty propagation search + triage | Val | 2 | — | Sep 10 |
+| **Gap 3:** Burst missingness search + triage | Val | 1 | — | Sep 11 |
+| **Update extraction matrix** with MNAR/bridge columns | Fer | 1 | Gap 1 done | Sep 10 |
+| **Journal selection** (5 options: APC, review time, rejection rate) | Fer | 1 | — | Sep 10 |
+| **Section 2: Review Methodology** (2.1–2.6) | Val + Fer | 3 | — | Sep 12 |
+| **Section 3: Classical foundations** (Rubin, EM, MI) | — | 3 | — | Sep 15 |
+| **Section 4: Traditional methods** (interpolation, KNN, Kalman) | — | 2 | — | Sep 17 |
+| **Section 5: ML bridge** (SOM, MLP, RF) | — | 2 | — | Sep 19 |
+| **Section 6: Deep generative models** (GANs, VAEs, SAITS, CSDI) | — | 3 | — | Sep 22 |
+| **Section 7: Application to air quality / SIMA** | — | 2 | — | Sep 24 |
+| **Section 8: Discussion** (RMSE fallacy, bidirectional leakage, MNAR bridge, future work) | — | 2 | Gaps 1-3 | Sep 26 |
+| **Conclusion** | — | 1 | — | Sep 27 |
+| **Internal review + revision** | Val + Fer | 3 | all writing | Sep 30 |
+
+**Total:** ~26 person-days across 22 calendar days (2 people).
+
+**Unassigned writing sections:** Sections 3–8 need Val/Fer ownership. The bitácora shows Fernando drafting the intro and Valeria doing the research/tool work — you'll want to split the writing sections explicitly.
+
+**Risk:** The writing phases (Sections 3–8) are sequential by narrative arc but could partially overlap if each person drafts different sections in parallel. If writing is fully parallelized (Val takes 3 sections, Fer takes 3), the critical path drops to ~14 calendar days + 3 days revision = 17 days. Feasible but tight.
 
 ---
 
@@ -102,7 +132,7 @@ NotebookLM found 11 candidate papers across 4 themes:
 - [x] NotebookLM deep search #1: modern bridge papers (2018-2025) — 11 candidates found
 - [x] Review and triage the 11 candidates — 6 accepted, 5 skipped. Added to Zotero and .bib.
   - ADD: #1 NARFCS (Tompsett 2018), #3 FragmGAN (Fang 2023), #5 MIWAE (Mattei 2019), #6 not-MIWAE (Ipsen 2021), #8 PSMVAE (Ghalebikesabi 2021), #10 Beyond Accuracy (2025)
-  - SKIP: #2 Tipping Point, #4 Nazábal VAE, #7 GNR, #9 IVGAE, #11 van Buuren
+  - SKIP: #2 Tipping Point, #4 Nazábal VAE, #7 GNR, #9 IVGAE, #11 van Buuren (Section 2.6 skipped as standalone candidate — full textbook *Flexible Imputation of Missing Data* added to Zotero separately)
 - [x] NotebookLM deep search #2: pre-2018 foundational MNAR/pattern-mixture/selection model theory — results in `Notebooklm/classical-theoretical-foundations.md`. Report covers 4 areas: selection vs. pattern-mixture models, MNAR taxonomy, sensitivity analysis origins, and ignorability foundations.
 - [x] Triage second batch — 5 accepted. Added to Zotero and .bib.
   - ADD: Little (1993) pattern-mixture models, Diggle & Kenward (1994) informative dropout, Little (1995) dropout taxonomy, Scharfstein, Rotnitzky & Robins (1999) semiparametric sensitivity, Carpenter, Kenward & White (2007) delta-adjustment method
@@ -166,7 +196,7 @@ NotebookLM found 11 candidate papers across 4 themes:
 | Code/data available | Yes/No + link |
 | Relevance to taxonomy | Where it fits in the review's narrative |
 
-**Status:** Not started. Depends on Phase 1 to filter relevant articles.
+**Status:** Fernando completed the matrix with 104 references (2026-09-06). May need updating for MNAR-specific columns once Phase 1.7 Gap 1 understanding is solidified.
 
 ---
 
@@ -182,7 +212,7 @@ NotebookLM found 11 candidate papers across 4 themes:
 - 2.5 Exclusion criteria
 - 2.6 Synthesis strategy (organize by inferential foundations, method family, output type, missingness mechanism, data structure, computational cost, application domain)
 
-**Status:** Not started. Fernando proposed the structure on Aug 23.
+**Status:** Fernando proposed the structure (2026-08-23). Valeria started drafting (2026-09-01). In progress.
 
 
 
@@ -190,19 +220,16 @@ NotebookLM found 11 candidate papers across 4 themes:
 
 **Narrative arc:** Classical statistical foundations (Rubin, EM, MI) --> Traditional methods (interpolation, regression, KNN, Kalman) --> Machine learning (SOM, MLP, RF) --> Deep generative models (GANs, VAEs, diffusion, transformers/SAITS/CSDI) --> Application to air quality --> Limitations & open challenges
 
-**Status:** Not started. Depends on Phases 2 and 3.
+**Status:** Fernando drafted abstract + introduction in Spanish and English (2026-08-25), revised (2026-09-06). Remaining sections not started.
 
 ---
 
 ## Notes from Facundo (Aug 24)
 
-- SIMA data available since 1997; can be standardized
-- Must review computational capacity to choose appropriate methods
-- Climate in 1997 was very different from today — check validity, train multiple models, EDA, prior bias
-- Don't discard old data — behavior/shape should be similar
-- Prediction model: next-day forecasts, model confidence
-- SIMA constraint: 15-minute publishing window (7 min data collection + 7 min calculation, not parallel)
-- Machine limitations at SIMA
+- SIMA constraint: 15-minute publishing window (7 min data collection + 7 min calculation, not parallel) — relevant to bidirectional info leakage discussion (real-time vs. retrospective)
+- Must review computational capacity to choose appropriate methods — relevant when discussing practical feasibility of DL models
+
+Implementation-specific notes (data handling, prediction model, machine limitations) moved to `SIMA_implementation_notes.md`.
 
 ---
 
