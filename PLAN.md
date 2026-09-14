@@ -135,11 +135,19 @@ Bottom-up estimate. Today: 2026-09-08. Available: 22 days, 2 people.
 
 **Key decision (2026-09-03):** Phase 1.7 is now prioritized *before* finishing Phase 1.6 (extraction matrix). Reason: the extraction matrix needs columns like "Assumed missingness mechanism" and "Relevance to taxonomy." Without understanding the MNAR landscape first, those columns can't be filled meaningfully.
 
+**Recurring meeting:** Every Wednesday with professors Raúl and Blanca Rosa.
+
 **Professor meeting feedback (2026-09-02):**
 - Professors confirmed the MNAR gap is the highest priority
 - The central problem: modern DL imputation methods (BRITS, SAITS, CSDI) don't state or verify the theoretical conditions (missingness mechanism) under which they are valid — the justification that links Rubin's framework to the method is missing
 - Fernando noted that Sun, Qin & Huang (2018) — "Missing Information Principle" — is the only paper in the collection that touches this. We traced its citations via OpenAlex but found they are survival analysis focused, not useful for the imputation bridge.
 - Valeria finds it difficult to understand the types of MNAR — this is a reading priority
+
+**Professor meeting feedback (2026-09-09):**
+- Professors agreed with the "missing bridge" argument (the theoretical gap between DL imputation and Rubin's framework for time series)
+- To claim the bridge doesn't exist, we must document a formal search and report the methodology in the paper
+- Blanca Rosa: use Boolean searches in Web of Science and Scopus, track findings (or absence of findings)
+- Search queries and log template in `notes/bridge_search_queries.md`
 
 **Scope decisions (2026-08-31):** The peer review identified 7 areas of concern. We evaluated each against our review's focus (imputation methods for multivariate time series in air quality) and made the following calls. These decisions can be revisited if a journal reviewer or Facundo disagrees:
 
@@ -178,6 +186,7 @@ NotebookLM found 11 candidate papers across 4 themes:
   - Gupta & Lam (1996) "Estimating Missing Values Using Neural Networks" — one of the earliest papers using NNs for imputation, historical marker for when ML entered the imputation space without Rubin's theoretical grounding
   - Rey del Castillo (2012, Eurostat WP.37) "Use of Machine Learning Methods to Impute Categorical Data" — explicitly quotes Rubin (1996) on why RMSE/hit-rate is the wrong evaluation criterion for imputation, then shows ML classifiers beating MI on exactly that metric (87% vs 66%). Perfect illustration of the inference-vs-accuracy tension.
   - Richard & Lippmann (1991) "Neural Network Classifiers Estimate Bayesian a posteriori Probabilities" (found via Hanson 1992 references) — proves NN classifiers approximate Bayesian posteriors. The equivalent theorem for NN *imputation* (proving convergence to Rubin-valid posterior predictive distributions) appears not to exist yet — this is a key observation for the discussion section.
+- [ ] Formal search in Web of Science + Scopus (4 Boolean queries) to document that the bridge paper does not exist. Required by professors to support the missing bridge claim. Queries in `notes/bridge_search_queries.md`. Results to be reported in §2.
 
 ### Gap 2: Imputation uncertainty propagation (high priority)
 - [ ] Search for papers on Rubin's pooling rules applied to deep learning, conformal prediction intervals for time series imputation
