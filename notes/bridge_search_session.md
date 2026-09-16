@@ -13,12 +13,12 @@ Execute the 4 Boolean queries from `bridge_search_queries.md` in WoS + Scopus, s
 
 **Workflow:**
 1. [DONE] Import both exports into Zotero collection "Bridge Search Q1", deduplicate by DOI → **473 unique papers**
-2. [ ] Export deduplicated set, upload to NotebookLM
-3. [ ] Prompt NotebookLM with screening criteria (classify into formal proof / discusses validity / mentions in passing)
+2. [DONE] Export deduplicated set, upload to NotebookLM
+3. [DONE] Prompt NotebookLM with screening criteria in 16 batches of ~30 papers each
 4. [ ] Verify NotebookLM's top-tier classifications manually (positive controls: not-MIWAE, FragmGAN, PSMVAE)
 5. [ ] Record final counts: total unique, relevant after screening, any new finds
 
-**Screening result:** (pending)
+**Screening result:** 16 batches completed → 472 papers screened. Merged into `Q1_all_batches.csv` (2026-09-15).
 
 ### Query 2 — Narrow: DL imputation + statistical theory + time series
 - Scopus: ___
