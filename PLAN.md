@@ -35,40 +35,50 @@ Bottom-up estimate. Today: 2026-09-08. Available: 22 days, 2 people.
 
 **Week 1 (Sep 8–14): Gap searches + start writing**
 
-| Task | Owner | Est. days | Target |
-|------|-------|-----------|--------|
-| Gap 2: Uncertainty propagation search + triage | Val | 2 | Sep 10 |
-| Gap 3: Burst missingness search + triage | Val | 1 | Sep 11 |
-| Finish §2 Review Methodology | Val | 2 | Sep 12 |
-| §3 Foundations of missing-data inference | Fer | 3 | Sep 12 |
-| Journal shortlist (5 options: APC, review time, rejection rate) | Fer | 1 | Sep 10 |
+| Task | Owner | Status | Target |
+|------|-------|--------|--------|
+| §3 Foundations of missing-data inference | Fer | DONE | Sep 12 |
+| Journal shortlist (5 options: APC, review time, rejection rate) | Fer | DONE | Sep 10 |
 
-**Week 2 (Sep 15–21): Core body writing**
+**Week 1.5–2 (Sep 14–21): Formal bridge search + core writing**
 
-| Task | Owner | Est. days | Target |
-|------|-------|-----------|--------|
-| §4 Classical approaches to imputation | Fer | 2 | Sep 17 |
-| §5 Deep learning for MTS imputation | Fer | 3 | Sep 21 |
-| §6 Evaluation of imputation methods | Val | 2 | Sep 17 |
-| §8 Taxonomy and practical decision framework | Val | 2 | Sep 19 |
+The formal bridge search in WoS + Scopus (4 Boolean queries, 8 database runs) became a major task not in the original estimate. It required deduplication in Zotero, bulk screening in NotebookLM (16 batches), and full-text verification of 67 papers. This shifted Val's writing start by ~1 week.
 
-**Week 3 (Sep 22–27): Remaining sections + integration**
+| Task | Owner | Status | Target |
+|------|-------|--------|--------|
+| Bridge search Q1 — run in WoS + Scopus, deduplicate (473 papers) | Val | DONE | Sep 14 |
+| Bridge search Q1 — NotebookLM screening (16 batches) | Val | DONE | Sep 15 |
+| Bridge search Q1 — full-text verification of A papers (21→5 confirmed) | Val | DONE | Sep 18 |
+| Bridge search Q1 — full-text verification of B papers (46→0 upgraded) | Val | DONE | Sep 19 |
+| §4 Classical approaches to imputation | Fer | DONE | Sep 17 |
+| §5 Deep learning for MTS imputation | Fer | ~50% | Sep 21 |
 
-| Task | Owner | Est. days | Target |
-|------|-------|-----------|--------|
-| §7 Application domains | Fer | 2 | Sep 24 |
-| §9 Open challenges and research agenda | Val | 2 | Sep 24 |
-| §10 Conclusion | Val + Fer | 1 | Sep 25 |
-| Revise §1 Introduction (align with final content) | Fer | 1 | Sep 26 |
+**Week 3 (Sep 22–27): Remaining searches + writing + integration**
 
-**Week 3.5 (Sep 27–30): Internal review**
+| Task | Owner | Status | Target |
+|------|-------|--------|--------|
+| Bridge search Q2, Q3, Q4 — run in WoS + Scopus, screen results | Val | TODAY | Sep 22 |
+| §5 Deep learning for MTS imputation (finish) | Fer | | Sep 23 |
+| §7 Application domains | Fer | | Sep 25 |
+| §2 Review Methodology | Val | | Sep 24 |
+| §6 Evaluation of imputation methods | Val | | Sep 25 |
+| §9 Open challenges and research agenda | Val | | Sep 26 |
+| §8 Taxonomy and practical decision framework | Val | | Sep 27 |
+| §10 Conclusion | Val + Fer | | Sep 27 |
+| Revise §1 Introduction (align with final content) | Fer | | Sep 27 |
 
-| Task | Owner | Est. days | Target |
-|------|-------|-----------|--------|
-| Cross-review (each reads the other's sections) | Val + Fer | 2 | Sep 29 |
-| Final integration and polish | Val + Fer | 1 | Sep 30 |
+**Week 3.5 (Sep 28–30): Internal review**
 
-**Total:** ~27 person-days across 22 calendar days (2 people).
+| Task | Owner | Status | Target |
+|------|-------|--------|--------|
+| Cross-review (each reads the other's sections) | Val + Fer | | Sep 29 |
+| Final integration and polish | Val + Fer | | Sep 30 |
+
+**Open items from bridge search Q1:**
+- [ ] **KAI paper** — "KAI: A Scalable Kalman-Attention Imputation Method for Robust Inference in Probabilistic Data." Abstract claims hybrid Kalman-attention for multivariate time series with interval coverage under MI. No free full text found yet. If it validates Rubin-style inference, this could be the closest paper to the time-series bridge. Must find and read.
+- [ ] **Positive controls check** — not-MIWAE, FragmGAN, PSMVAE did not appear in the 5 confirmed-A papers. Need to verify whether they were in the original Q1 search results or were filtered out by the WoS/Scopus queries.
+
+**Total:** ~30 person-days across 22 calendar days (2 people). Bridge search added ~5 person-days to Val's workload.
 
 **Proposed split rationale:**
 - **Fer** → §3 Foundations, §4 Classical, §5 Deep learning, §7 Applications — Fer has the extraction matrix and drafted the intro, so the descriptive/survey sections build on that work.
