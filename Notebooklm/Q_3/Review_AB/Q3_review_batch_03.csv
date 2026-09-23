@@ -1,0 +1,7 @@
+authors,year,title,is_imputation,formal_result,mechanism_claim,data_type,verdict
+"Andrea Francesco Abate, Lucia Cascone, Valeria Fraenza, Michele Nappi, Pierluigi Ritrovato",2026,Constrained conditional LLM-based imputation via iterative chained updates,YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-C/D
+"Ruichu Cai, Kaitao Zheng, Junxian Huang, Zijian Li, Zhengming Chen, Boyan Xu, Zhifeng Hao",2025,Causal View of Time Series Imputation: Some Identification Results on Missing Mechanism,YES,NO,FORMAL PROOF,Time series (Multivariate),DOWNGRADE-B
+"Aditya Gorla, Ryan Wang, Zhengtong Liu, Ulzee An, Sriram Sankararaman",2025,CACTI: Leveraging Copy Masking and Contextual Information to Improve Tabular Data Imputation,YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-C/D
+"Zarin Tahia Hossain, Mostafa Milani",2025,Beyond Accuracy: An Empirical Study of Uncertainty Estimation in Imputation,YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-C/D
+"Lei Huang, Meng Song, Hui Shen, Huixiao Hong, Ping Gong, Hong-Wen Deng, Chaoyang Zhang",2023,Deep Learning Methods for Omics Data Imputation,YES,NO,MENTIONS ONLY,Both (Tabular / Time series),DOWNGRADE-C/D
+"Fangya Tan, Bowen Long",2026,Bridging Machine Learning and Clinical Endpoints: A METABRIC-Informed Simulation Study of Missing Data Imputation for RECIST-Based Best Overall Response,YES,NO,EMPIRICAL ONLY,Time series (Multivariate),DOWNGRADE-C/D

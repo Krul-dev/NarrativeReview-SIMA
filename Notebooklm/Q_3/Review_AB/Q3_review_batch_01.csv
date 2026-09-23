@@ -1,0 +1,7 @@
+authors,year,title,is_imputation,formal_result,mechanism_claim,data_type,verdict
+"Yige Sun, Jing Li, Yifan Xu, Tingting Zhang, Xiaofeng Wang",2023,"Deep learning versus conventional methods for missing data imputation: A review and comparative study",YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-C/D
+"Christopher Willis, Dylan A. Goodin, Hunter A. Miller, Sally Suliman, Hermann B. Frieboes",2026,"Evaluation of accuracy and potential biases of imputation methods on biomedical datasets subject to different mechanisms and patterns of missingness",YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-C/D
+"George Sun, Yi-Hui Zhou",2026,"Generative Conditional Missing Imputation Networks",YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-B
+"Fan Zhou, Tengfei Li, Haibo Zhou, Jieping Ye, Hongtu Zhu",2019,"Graph-Based Semi-Supervised Learning with Nonignorable Nonresponses",NOT-IMPUTATION,NO,FORMAL PROOF,Both,DOWNGRADE-C/D
+"Halimu N. Haliduola, Frank Bretz, Ulrich Mansmann",2022,"Missing data imputation in clinical trials using recurrent neural network facilitated by clustering and oversampling",YES,NO,EMPIRICAL ONLY,Multivariate Time Series,DOWNGRADE-C/D
+"Niels Bruun Ipsen, Pierre-Alexandre Mattei, Jes Frellsen",2022,"How to deal with missing data in supervised deep learning?",NOT-IMPUTATION,NO,MENTIONS ONLY,Both,DOWNGRADE-C/D

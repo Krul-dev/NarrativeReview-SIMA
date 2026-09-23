@@ -1,0 +1,4 @@
+authors,year,title,is_imputation,formal_result,mechanism_claim,data_type,verdict
+"David K. Lim, Naim U. Rashid, Junier B. Oliva, Joseph G. Ibrahim",2021,Unsupervised Imputation of Non-ignorably Missing Data Using Importance-Weighted Autoencoders,YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-B
+"Marine Le Morvan, Julie Josse, Erwan Scornet, Gaël Varoquaux",2021,What's a good imputation to predict with missing values?,NOT-IMPUTATION,NO,MENTIONS ONLY,Tabular,DOWNGRADE-C/D
+"Gift Khangamwa, Terence L. van Zyl, Clint J. van Alten",2022,"Towards a methodology for addressing missingness in datasets, with an application to demographic health datasets",YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-C/D

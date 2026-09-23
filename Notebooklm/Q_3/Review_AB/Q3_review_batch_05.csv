@@ -1,0 +1,7 @@
+authors,year,title,is_imputation,formal_result,mechanism_claim,data_type,verdict
+"Sara Rejeb, Catherine Duveau, Tabea Rebafka",2022,Self-organizing maps for exploration of partially observed data and imputation of missing values,YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-C/D
+"Ricardo Cardoso Pereira, Pedro Henriques Abreu, Pedro Pereira Rodrigues",2024,Siamese Autoencoder Architecture for the Imputation of Data Missing Not at Random,YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-C/D
+"Richard Serrano, Charlotte Laclau, Baptiste Jeudy, Christine Largeron",2024,Reconstructing the Unseen: GRIOT for Attributed Graph Imputation with Optimal Transport,YES,NO,EMPIRICAL ONLY,Tabular / Graph,DOWNGRADE-C/D
+"Xing Wu, Luolin Xiong, Chensheng Liu",2025,Physics-Informed Data Augmentation for Cyber-Physical Power Systems under Mixed Incompleteness Patterns,YES,NO,EMPIRICAL ONLY,Time series (multivariate),DOWNGRADE-C/D
+"Yue Yin, Jiaoyun Yang, Ning An",2026,SCImputation: Mitigating Feature Confounding From a Structural Causal Perspective for Data Imputation,YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-B
+"Zongyu Dai, Emily Getzen, Qi Long",2024,SADI: Similarity-Aware Diffusion Model-Based Imputation for Incomplete Temporal EHR Data,YES,NO,EMPIRICAL ONLY,Time series (multivariate),DOWNGRADE-C/D

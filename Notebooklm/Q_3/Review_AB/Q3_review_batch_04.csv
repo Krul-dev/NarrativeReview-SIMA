@@ -1,0 +1,7 @@
+authors,year,title,is_imputation,formal_result,mechanism_claim,data_type,verdict
+"Rifaa Sadegh, Ahmed Mohameden, Mohamed Lemine Salihi, Mohamedade Farouk Nanne",2025,"A survey of missing data imputation techniques: statistical methods, machine learning models, and GAN-based approaches",YES,NO,MENTIONS ONLY,Tabular and time series,DOWNGRADE-C/D
+"Juan-Francisco Cabrera-Sánchez, Ricardo Cardoso Pereira, Pedro Henriques Abreu, Esther-Lydia Silva-Ramírez",2024,A Perspective on the Missing at Random Problem: Synthetic Generation and Benchmark Analysis,YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-C/D
+"Mihir Momaya, Gyorgy Simon, Sergio Duarte, Lisiane Pruinelli",2026,A Novel Approach for Handling Missing Data in Multivariate Time Series Clustering: Case Study on Predicting Delayed Graft Function,YES,NO,EMPIRICAL ONLY,Time series (multivariate),DOWNGRADE-C/D
+Yong Zheng,2026,A Comprehensive Review of Rating Imputation in Recommender Systems: From Data Completion to Inference-Oriented Missing-Data Estimation,YES,NO,MENTIONS ONLY,Tabular,DOWNGRADE-C/D
+"Antonio D'Ambrosio, Massimo Aria, Roberta Siciliano",2012,Accurate Tree-based Missing Data Imputation and Data Fusion within the Statistical Learning Paradigm,YES,NO,EMPIRICAL ONLY,Tabular,DOWNGRADE-B
+"Michael Poette, Sandrine Mouysset, Daniel Ruiz, Vincent Pey, Jean-Marc Alliot, Vincent Minville",2026,Benchmarking imputation strategies for missing time-series data in critical care using real-world-inspired scenarios,YES,NO,EMPIRICAL ONLY,Time series (multivariate),DOWNGRADE-C/D
