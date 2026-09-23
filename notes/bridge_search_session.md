@@ -180,6 +180,25 @@ Output a table with columns: authors, year, title, is_imputation (YES/NOT-IMPUTA
 
 **Q4 conclusion:** 0 relevant papers. No convergence proofs for NN imputation exist in WoS/Scopus under this query. Data saved in `Notebooklm/Q_4/Q4_all.csv`.
 
+## Summary of Findings (all queries complete, 2026-09-23)
+
+Four Boolean queries were run across Web of Science and Scopus to search for a paper that formally proves time-series deep learning imputation produces Rubin-valid statistical inference. A total of 666 papers were retrieved, deduplicated, screened by abstract, and verified by full text where applicable.
+
+| Query | Scope | Papers | Confirmed-A | Time series? |
+|-------|-------|--------|-------------|--------------|
+| Q1 | DL imputation + statistical theory (broad) | 473 | 5 | No — all tabular |
+| Q2 | DL imputation + statistical theory + time series | 13 | 0 | — |
+| Q3 | DL imputation + missingness mechanism validity | 177 | 1 (Dai et al. 2021) | No — tabular |
+| Q4 | NN imputation + convergence/posterior proof | 3 | 0 | — |
+
+**Conclusion:** No paper in the literature formally proves that a time-series DL imputation architecture (BRITS, SAITS, CSDI, or similar) produces samples from the posterior predictive distribution P(X_mis | X_obs) under stated missingness conditions. The few confirmed formal results (6 total across Q1 and Q3) are all for tabular data. The missing bridge between Rubin's framework and time-series deep learning imputation remains unproven — this is a key contribution of the review.
+
+**Caveats:**
+- 9 papers in Q3 could not be accessed for full-text verification, including KAI (Kalman-attention for time series), which remains the most promising unfound lead.
+- Positive controls (not-MIWAE, FragmGAN, PSMVAE) from our existing collection did not appear in Q1 confirmed results — needs verification of whether they were captured by the search queries.
+
+---
+
 ## NotebookLM Screening Prompt (Q1)
 
 ```
