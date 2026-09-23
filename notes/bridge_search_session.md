@@ -169,8 +169,16 @@ Output a table with columns: authors, year, title, is_imputation (YES/NOT-IMPUTA
 **Q3 conclusion:** No formal proof found for time-series DL imputation. The one confirmed-A paper (Dai et al. 2021) is tabular, consistent with Q1 and Q2 findings.
 
 ### Query 4 — Convergence proof: NN imputation + posterior/distribution guarantee
-- Scopus: ___
-- Web of Science: ___
+
+**Raw results:**
+- Combined (WoS + Scopus): 3 documents
+
+**Screening:** None of the 3 papers are about imputation. All are false positives from keyword overlap:
+1. Qaffas (2026) — blockchain + IoT data transfer
+2. Linda & Griffin (2026) — blockchain + credit card fraud detection with zeroing neural network
+3. Cai et al. (2026) — matrix completion (low-rank recovery, not missing-data imputation in Rubin's sense)
+
+**Q4 conclusion:** 0 relevant papers. No convergence proofs for NN imputation exist in WoS/Scopus under this query. Data saved in `Notebooklm/Q_4/Q4_all.csv`.
 
 ## NotebookLM Screening Prompt (Q1)
 

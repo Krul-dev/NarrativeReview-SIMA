@@ -93,16 +93,16 @@ AND ("proof" OR "theorem" OR "proposition" OR "lemma") )
 
 For each query, record in the table below:
 
-| Query | Database | Date | Results | Relevant after screening | Notes |
-|-------|----------|------|---------|--------------------------|-------|
-| Q1    | WoS      |      |         |                          |       |
-| Q1    | Scopus   |      |         |                          |       |
-| Q2    | WoS      |      |         |                          |       |
-| Q2    | Scopus   |      |         |                          |       |
-| Q3    | WoS      |      |         |                          |       |
-| Q3    | Scopus   |      |         |                          |       |
-| Q4    | WoS      |      |         |                          |       |
-| Q4    | Scopus   |      |         |                          |       |
+| Query | Database | Date | Results | Deduplicated | Relevant after screening | Notes |
+|-------|----------|------|---------|--------------|--------------------------|-------|
+| Q1    | WoS      | Sep 14 | 348   | 473 (combined) | 5 confirmed-A (tabular), 0 from B | Full-text verified. No time-series bridge. |
+| Q1    | Scopus   | Sep 14 | 325   | (see above)  | (see above)              | |
+| Q2    | WoS+Scopus | Sep 22 | 13  | 13           | 0 confirmed-A            | 6 imputation papers verified full-text, 1 retracted. No formal proofs. |
+| Q2    | |        |         |              |                          | |
+| Q3    | WoS+Scopus | Sep 22 | 177 | 177          | 1 confirmed-A (tabular)  | Dai et al. 2021, GAN, MAR proof. Tabular only. 9 papers not found. |
+| Q3    | |        |         |              |                          | |
+| Q4    | WoS+Scopus | Sep 23 | 3   | 3            | 0                        | All false positives (blockchain, matrix completion). |
+| Q4    | |        |         |              |                          | |
 
 For "Relevant after screening": read titles/abstracts of all results. Mark how many actually
 address the bridge (formal proof that DL imputation → valid statistical inference). If any do,
