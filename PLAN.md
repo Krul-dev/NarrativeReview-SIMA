@@ -10,69 +10,66 @@
 
 **Context:** College degree research project. The review will later inform the development of an imputation method for SIMA (Sistema Integral de Monitoreo Ambiental) in Monterrey. Facundo will assist with the future implementation phase, not the review itself.
 
-**Target:** Finish writing by **2026-09-30** (22 days from Sep 8).
+**Target:** Original deadline was 2026-09-30. Writing still in progress — revised timeline below.
 
 ---
 
-## Timeline (target: 2026-09-30)
+## Current Status (updated 2026-09-30)
 
-Bottom-up estimate. Today: 2026-09-08. Available: 22 days, 2 people.
+Draft PDF: `ENG - First Draft Survey Paper.pdf`
 
-### Article sections
+### Section status (from actual draft review)
 
-1. Introduction — drafted (Fer), needs revision
-2. Review Methodology — partially drafted, Val finishing
-3. Foundations of missing-data inference
-4. Classical approaches to imputation
-5. Deep learning for multivariate time-series imputation
-6. Evaluation of imputation methods
-7. Application domains
-8. Taxonomy and practical decision framework
-9. Open challenges and research agenda
-10. Conclusion
+| # | Section | Owner | Status | Notes |
+|---|---------|-------|--------|-------|
+| 1 | Introduction | Fer | DONE | Good but has duplicate citation formatting. LoRA paragraph is tangential. |
+| 2 | Review Methodology | Val | ~70% | Written: review type, seed collection, citation network, eligibility/exclusion, extraction description. **Missing:** bridge search results (4 queries, 666 papers, 0 bridge found), corpus size numbers. |
+| 3 | Foundations of missing-data inference | Fer | DONE | Strongest section. Rigorous math, good Rubin coverage. |
+| 4 | Classical and Structured Methods | Fer | DONE | Comprehensive. Reads as catalogue — could use stronger narrative transitions. |
+| 5 | Deep Learning and Generative Models | Fer | ~85% | Good structure. **Missing:** ContrAttNet, USGAN, Im-BiLSTM, RNN-DAE, Fed-cGAN. VAE/MIWAE coverage too compressed. |
+| 6 | Evaluation Frameworks and Performance Metrics | Val | ~90% | Thorough metric coverage + summary table. **Missing:** RMSE-vs-Rubin argument as opening framing, "Beyond Accuracy" benchmark reference. |
+| 7 | Application Domains | Fer | **EMPTY** | Title only. |
+| 8 | Taxonomy and Method-Selection Framework | Val | **EMPTY** | Title only. |
+| 9 | Open Challenges and Research Agenda | Val | **EMPTY** | Title only. Paper's most important section. |
+| 10 | Conclusion | Val + Fer | **EMPTY** | Title only. |
+| — | Abstract | Joint | DONE | Solid but doesn't foreground the "missing bridge" finding. |
 
-### Task estimates and proposed split
+### Cross-cutting issues in draft
+- **Duplicate citations** throughout: "[7], [8] [7,8]" — manual + auto citation overlap. Mendeley migration in progress.
+- **No figures or tables** in the body (except §6 evaluation summary table). Needs: timeline figure, taxonomy table, possibly a method-selection flowchart.
+- References list has ~61 entries.
 
-**Week 1 (Sep 8–14): Gap searches + start writing**
+### Remaining work
 
-| Task | Owner | Status | Target |
-|------|-------|--------|--------|
-| §3 Foundations of missing-data inference | Fer | DONE | Sep 12 |
-| Journal shortlist (5 options: APC, review time, rejection rate) | Fer | DONE | Sep 10 |
+**Val's sections (priority order):**
+1. §9 Open Challenges — write the "missing bridge" argument (headline contribution). Bridge search data ready in `notes/bridge_search_session.md`.
+2. §8 Taxonomy table — synthesize extraction matrix into structured comparison table + decision framework.
+3. §2 finish — add bridge search methodology and results (queries, 666 papers, 0 found).
+4. §6 revision — add RMSE-vs-Rubin opening argument, reference "Beyond Accuracy" (2025).
+5. §10 Conclusion — joint with Fer, write after §7–9 exist.
 
-**Week 1.5–2 (Sep 14–21): Formal bridge search + core writing**
+**Fer's sections:**
+1. §7 Application Domains — write. Needs: air quality/SIMA, healthcare, traffic, energy, structural health, industrial, remote sensing.
+2. §5 finish — add missing models (ContrAttNet, USGAN, etc.), expand MIWAE/not-MIWAE coverage.
+3. §1 revision — clean duplicate citations, trim LoRA paragraph.
+4. §10 Conclusion — joint with Val.
 
-The formal bridge search in WoS + Scopus (4 Boolean queries, 8 database runs) became a major task not in the original estimate. It required deduplication in Zotero, bulk screening in NotebookLM (16 batches), and full-text verification of 67 papers. This shifted Val's writing start by ~1 week.
+**Joint tasks:**
+- Mendeley citation migration (replace all manual citations).
+- Add figures/tables.
+- Abstract revision (foreground the missing bridge finding).
+- Cross-review of each other's sections.
+- Final polish.
 
-| Task | Owner | Status | Target |
-|------|-------|--------|--------|
-| Bridge search Q1 — run in WoS + Scopus, deduplicate (473 papers) | Val | DONE | Sep 14 |
-| Bridge search Q1 — NotebookLM screening (16 batches) | Val | DONE | Sep 15 |
-| Bridge search Q1 — full-text verification of A papers (21→5 confirmed) | Val | DONE | Sep 18 |
-| Bridge search Q1 — full-text verification of B papers (46→0 upgraded) | Val | DONE | Sep 19 |
-| §4 Classical approaches to imputation | Fer | DONE | Sep 17 |
-| §5 Deep learning for MTS imputation | Fer | ~50% | Sep 21 |
+**Next reunion:** Friday 2026-10-02.
 
-**Week 3 (Sep 22–27): Remaining searches + writing + integration**
+---
 
-| Task | Owner | Status | Target |
-|------|-------|--------|--------|
-| Bridge search Q2, Q3, Q4 — run in WoS + Scopus, screen results | Val | TODAY | Sep 22 |
-| §5 Deep learning for MTS imputation (finish) | Fer | | Sep 23 |
-| §7 Application domains | Fer | | Sep 25 |
-| §2 Review Methodology | Val | | Sep 24 |
-| §6 Evaluation of imputation methods | Val | | Sep 25 |
-| §9 Open challenges and research agenda | Val | | Sep 26 |
-| §8 Taxonomy and practical decision framework | Val | | Sep 27 |
-| §10 Conclusion | Val + Fer | | Sep 27 |
-| Revise §1 Introduction (align with final content) | Fer | | Sep 27 |
+### Original timeline (for reference)
 
-**Week 3.5 (Sep 28–30): Internal review**
+Estimated Sep 8. Original target was Sep 30 (22 days, 2 people, ~30 person-days).
 
-| Task | Owner | Status | Target |
-|------|-------|--------|--------|
-| Cross-review (each reads the other's sections) | Val + Fer | | Sep 29 |
-| Final integration and polish | Val + Fer | | Sep 30 |
+Bridge search (4 queries, 8 database runs, 666 papers screened) was not in original estimate — added ~5 person-days to Val's workload and shifted writing start by ~1 week.
 
 **Open items from bridge search Q1:**
 - [ ] **KAI paper** — "KAI: A Scalable Kalman-Attention Imputation Method for Robust Inference in Probabilistic Data." Abstract claims hybrid Kalman-attention for multivariate time series with interval coverage under MI. No free full text found yet. If it validates Rubin-style inference, this could be the closest paper to the time-series bridge. Must find and read.
@@ -196,7 +193,7 @@ NotebookLM found 11 candidate papers across 4 themes:
   - Gupta & Lam (1996) "Estimating Missing Values Using Neural Networks" — one of the earliest papers using NNs for imputation, historical marker for when ML entered the imputation space without Rubin's theoretical grounding
   - Rey del Castillo (2012, Eurostat WP.37) "Use of Machine Learning Methods to Impute Categorical Data" — explicitly quotes Rubin (1996) on why RMSE/hit-rate is the wrong evaluation criterion for imputation, then shows ML classifiers beating MI on exactly that metric (87% vs 66%). Perfect illustration of the inference-vs-accuracy tension.
   - Richard & Lippmann (1991) "Neural Network Classifiers Estimate Bayesian a posteriori Probabilities" (found via Hanson 1992 references) — proves NN classifiers approximate Bayesian posteriors. The equivalent theorem for NN *imputation* (proving convergence to Rubin-valid posterior predictive distributions) appears not to exist yet — this is a key observation for the discussion section.
-- [ ] Formal search in Web of Science + Scopus (4 Boolean queries) to document that the bridge paper does not exist. Required by professors to support the missing bridge claim. Queries in `notes/bridge_search_queries.md`. Results to be reported in §2.
+- [x] Formal search in Web of Science + Scopus (4 Boolean queries, 666 papers screened across all queries, 0 time-series bridge papers found). Results documented in `notes/bridge_search_session.md`. Summary table in `notes/bridge_search_queries.md`. **Still needs to be written up in §2 of the article.**
 
 ### Gap 2: Imputation uncertainty propagation (high priority)
 - [ ] Search for papers on Rubin's pooling rules applied to deep learning, conformal prediction intervals for time series imputation
@@ -262,7 +259,7 @@ NotebookLM found 11 candidate papers across 4 themes:
 
 **Framing decision:** This is a **narrative review**, not a systematic review. §2 should describe the actual process used — purposive and iterative — without mimicking systematic review conventions (PRISMA, pre-registered search strings, strict inclusion/exclusion). Presenting systematic-style criteria risks a reviewer holding us to standards we can't meet. Instead, frame the rigor through traceability (search log, triage workflow, citation graph).
 
-**Revised subsections:**
+**Planned subsections:**
 - 2.1 Type of review — narrative, interpretive synthesis; scope and objectives
 - 2.2 Seed collection — initial ~75 articles from domain expertise and prior coursework
 - 2.3 Citation network analysis — forward/reverse citation tracing via OpenAlex to identify clusters and gaps
@@ -270,17 +267,17 @@ NotebookLM found 11 candidate papers across 4 themes:
 - 2.5 Triage process — structured ADD/SKIP evaluation against scope criteria (see `Notebooklm/TRIAGE_WORKFLOW.md` and `candidates_veredict.csv`)
 - 2.6 Synthesis strategy — organized by narrative arc (foundations → classical → DL → evaluation → challenges), not by chronology or method family alone
 
-**Status:** Fernando proposed the original structure (2026-08-23). Valeria started drafting (2026-09-01). Subsections revised (2026-09-08) to reflect narrative review framing. In progress.
+**Status (2026-09-30):** §2 is ~70% drafted in the PDF. What's written: review type framing, seed collection, citation-network-guided prioritization, eligibility/exclusion criteria, data extraction description. What's missing: bridge search results (4 queries, 666 papers, 0 found), corpus size numbers, extraction matrix dimensions.
 
-
+---
 
 ## Phase 4: Article Writing
 
-**Sections:** See Timeline above for the full 10-section structure and ownership split.
+**Sections:** See "Current Status" section above for per-section status.
 
 **Narrative arc:** Foundations of missing-data inference (Rubin, EM, MI) → Classical approaches (interpolation, KNN, Kalman) → Deep learning for MTS imputation (GANs, VAEs, SAITS, CSDI) → Evaluation methods → Application domains → Taxonomy/decision framework → Open challenges
 
-**Status:** Fernando drafted abstract + introduction in Spanish and English (2026-08-25), revised (2026-09-06). Fernando can start body writing immediately (2026-09-08). Remaining sections not started.
+**Status (2026-09-30):** §1–6 are written (§2 and §5 partially). §7–10 are empty (titles only). The draft is ~40 pages including references (61 refs). See `ENG - First Draft Survey Paper.pdf`.
 
 ---
 
@@ -307,7 +304,7 @@ These entries in the .bib don't seem to match the review's scope:
 
 ## Tools & Setup
 
-- **Reference manager:** Zotero (migrated from Mendeley on Aug 24)
+- **Reference manager:** Zotero for collection management. Migrating to Mendeley Cite plugin for Word citations (in progress as of Sep 30).
 - **APIs:** Semantic Scholar, OpenAlex (free, no key needed for basic use)
 - **This repo (NarrativeReview-SIMA):** Plan, extraction matrix, search log, NotebookLM research artifacts
 - **[PaperConnect repo](https://github.com/Krul-dev/PaperConnect):** Citation graph tool (Python), search tool, `SIMA PERSONAL.bib` file
