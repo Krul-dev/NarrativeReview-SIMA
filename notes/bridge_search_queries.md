@@ -7,7 +7,7 @@ Blanca Rosa agreed this claim requires a traceable, reported search (2026-09-09)
 Databases: Web of Science, Scopus
 Date searched: ____
 
----
+--- 
 
 ## Boolean Queries
 
